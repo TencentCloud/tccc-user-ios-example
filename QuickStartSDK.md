@@ -60,11 +60,11 @@
 
 ```c++
 // 引入C++头文件
-#include "tccc/include/ITCCCWorkstation.h"
+#include "tccc/include/ITCCCCloud.h"
 // 使用tccc命名空间
 using namespace tccc;
 // 获取tcccSDK 单例
-ITCCCWorkstation* tcccSDK = getTCCCShareInstance();
+ITCCCCloud* tcccSDK = getTCCCShareInstance();
 // 获取SDK版本号
 const char *  version = tcccSDK->getSDKVersion();
 
@@ -92,31 +92,9 @@ dispatch_async(dispatch_get_main_queue(), ^{
 });
 ```
 
-### 发起呼叫报 408 或者 503 错误，如何处理？
+### TCCC 怎么校验生成的 UserSig 是否正确？
+ 
+ 可通过云 API 调用生成UserSig，具体可查看 [创建用户数据签名](https://cloud.tencent.com/document/product/679/58260) 接口文档
 
-这种情况一般出现在应用程序切后台重新唤醒后，网络状态还未完全恢复。我们强烈建议您在发起呼叫或者是程序切回前台的时候调用接口判断是否是已登录。
 
-```cpp
-class TCCCCommonCallback : public ITXCallback {
-public:
-    TCCCCommonCallback() {
-    }
-    ~TCCCCommonCallback() override {
-        
-    }
-    void OnSuccess() override {
-    }
-    
-    void OnError(TCCCError error_code, const char *error_message) override {
-        // 登录异常，提醒用户，并且重新登陆。
-        if (code == 408 || code==503) {
-            // 网络还未恢复，重置网络。
-            tcccSDK->resetSip(false);
-        }
-    }
-};
-TCCCCommonCallback* checkLoginCB = new TCCCCommonCallback();
-// 检查登录状态
-tcccSDK->checkLogin(checkLoginCB);
-```
 

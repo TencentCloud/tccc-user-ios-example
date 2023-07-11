@@ -24,16 +24,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/**
-* 座席账号，格式为 ： xxx@qq.com
+/***
+*  音频入口ID
 */
-static NSString * const USERID = @"";
+static const char* AUDIO_CHANNELID = "";
 
 /**
-* 腾讯云呼叫中心 SDKAppId，需要替换为您自己账号下的 SDKAppId。
-* 进入腾讯云呼叫中心[控制台](https://console.cloud.tencent.com/ccc ) 创建应用，即可看到 SDKAppId，
-* 它是腾讯云用于区分客户的唯一标识。
-*/
+ * 腾讯云 SDKAppId，需要替换为您自己账号下的 SDKAppId。
+ * 进入腾讯云呼叫中心[控制台](https://console.cloud.tencent.com/ccc ) 创建应用，即可看到 SDKAppId，
+ * 它是腾讯云用于区分客户的唯一标识。
+ */
 static const int SDKAppID = 0;
 
 /**
@@ -50,7 +50,6 @@ static NSString * const SECRETID = @"";
 */
 static NSString * const SECRETKEY = @"";
 
-static NSString * const TO = @"075536564058";
 
 typedef void (^CompletionHandler)(NSString *token, NSError *error);
 

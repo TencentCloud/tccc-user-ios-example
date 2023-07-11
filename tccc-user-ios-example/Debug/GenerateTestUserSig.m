@@ -15,9 +15,11 @@
 {
     NSMutableDictionary *obj = [@{@"secretId": SECRETID,
                                   @"secretKey": SECRETKEY,
-                                  @"SeatUserId": userId,
+                                  @"Uid": userId,
                                   @"isTest": @(false),
                                   @"SdkAppId": @(SDKAppID),
+                                  @"ExpiredTime": @(3600),
+                                  @"ClientData": @(""),
                                 } mutableCopy];
     [self sendJSONPostRequestWithJSON:obj completion:completion];
 }
@@ -35,7 +37,7 @@
     }
 
     // 创建URL
-    NSURL *url = [NSURL URLWithString:@"https://tccc-gavin-5g19jovqc598f12b-1258344699.ap-guangzhou.app.tcloudbase.com/tccc-agent"];
+    NSURL *url = [NSURL URLWithString:@"https://tccc-gavin-5g19jovqc598f12b-1258344699.ap-guangzhou.app.tcloudbase.com/tccc"];
 
     // 创建URLRequest
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
@@ -71,7 +73,7 @@
                 NSNumber *errorCode = [responseJSON objectForKey:@"errorCode"];
                 NSString *errorMessage = responseJSON[@"errorMessage"];
                 if ([errorCode longValue] == 0) {
-                    NSString *token = responseJSON[@"Token"];
+                    NSString *token = responseJSON[@"UserSig"];
                     completion(token, nil);
                 } else {
                     NSDictionary *userInfo = @{NSLocalizedDescriptionKey: NSLocalizedString(@"get token failed.", nil)};

@@ -48,27 +48,27 @@
 
 [](id:step2)
 ### 步骤2：配置 tccc-user-ios-example 工程文件
-1. 找到并打开 debug/GenerateTestUserToken.h 文件。
+1. 找到并打开 debug/GenerateTestUserSig.h 文件。
 
-2. 设置 GenerateTestUserToken.h 文件中的相关参数：
+2. 设置 GenerateTestUserSig.h 文件中的相关参数：
 <ul>
-  <li/>USERID：座席账号，格式为 ： xxx@qq.com
+  <li/>AUDIO_CHANNELID：请设置为实际的 音频入口 ID。
   <li/>SDKAPPID：腾讯云呼叫中心 SDKAppId，需要替换为您自己账号下的 SDKAppId
 	<li/>SECRETID：计算签名用的加密密钥ID。
   <li/>SECRETKEY：计算签名用的加密密钥Key。
 </ul>
 
-![](https://qcloudimg.tencent-cloud.cn/raw/d1e4b21ab990b257df19ae78e4bc64c8.png)
+![](https://qcloudimg.tencent-cloud.cn/raw/2b7ae51a5ccf4ab52f9106a935cd08d1.png)
 
 >!
->- 本文提到的生成 UserSig 的方案是在客户端代码中配置 SECRETID、SECRETKEY，该方法中 SECRETID、SECRETKEY 很容易被反编译逆向破解，一旦您的密钥泄露，攻击者就可以盗用您的腾讯云流量，因此**该方法仅适合本地跑通 tccc-user-android-example 和功能调试**。
+>- 本文提到的生成 UserSig 的方案是在客户端代码中配置 SECRETID、SECRETKEY，该方法中 SECRETID、SECRETKEY 很容易被反编译逆向破解，一旦您的密钥泄露，攻击者就可以盗用您的腾讯云流量，因此**该方法仅适合本地跑通 tccc-user-ios-example 和功能调试**。
 >- 正确的 UserSig 签发方式是将 UserSig 的计算代码集成到您的服务端，并提供面向 App 的接口，在需要 UserSig 时由您的 App 向业务服务器发起请求获取动态 UserSig。更多详情请参见 [创建用户数据签名](https://cloud.tencent.com/document/product/679/58260)。
 
 
 ### 步骤3：编译运行
   使用 Xcode 打开源码工程 `tccc-user-ios-example`，单击**运行**即可。
 
-1. 点击 **获取token** > **登录**，
+1. 点击 **获取UserSig** > **呼叫**，
 2. 登录成功后点击外呼即可完成拨打功能。
 
 
@@ -76,6 +76,6 @@
 
 基本功能如下图所示
 
-![](https://qcloudimg.tencent-cloud.cn/raw/38aa87531f0fdf95fe47c6ad76ea9bd1.png)
+![](https://qcloudimg.tencent-cloud.cn/raw/ef2afc0a86401c6b5b6710f81b992834.png)
 
 

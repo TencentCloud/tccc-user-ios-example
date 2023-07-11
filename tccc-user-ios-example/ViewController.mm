@@ -12,20 +12,16 @@
 
 @interface ViewController ()
 
-@property (nonatomic, strong) UITextField *seatUserIdField;
-@property (nonatomic, strong) UITextField *tokenField;
-@property (nonatomic, strong) UIButton *getTokenButton;
-@property (nonatomic, strong) UIButton *loginButton;
-@property (nonatomic, strong) UIButton *isLoginButton;
-@property (nonatomic, strong) UIButton *logoutButton;
 
-@property (nonatomic, strong) UIButton *startCallButton;
-@property (nonatomic, strong) UIButton *hangupButton;
-@property (nonatomic, strong) UIButton *speakerButton;
-@property (nonatomic, strong) UIButton *muteButton;
+@property (weak, nonatomic) IBOutlet UIButton *btnStartCall;
+
+@property (weak, nonatomic) IBOutlet UIButton *btnSpeaker;
+@property (weak, nonatomic) IBOutlet UIButton *btnMute;
+
+@property (weak, nonatomic) IBOutlet UILabel *lblUserSig;
+@property (weak, nonatomic) IBOutlet UILabel *lblVersion;
 
 
-@property (nonatomic, strong) UITextView *txtVersion;
 
 @end
 
@@ -93,52 +89,58 @@ TCCCCommonCallback* startCallCallbackImpl = nullptr;
     // tcccSDK->addCallback(tcccCallback);
     // 获取TCCC SDK版本号
     const char *  version = tcccSDK->getSDKVersion();
-    self.txtVersion.text =  [NSString stringWithUTF8String:version];
+    self.lblVersion.text =  [NSString stringWithUTF8String:version];
     NSLog(@"tccc SDK version: %s",version);
 }
 
-- (void)getTokenButtonTapped:(UIButton *)sender {
-    self.getTokenButton.selected = true;
+- (IBAction)getTokenButtonTapped:(UIButton *)sender {
     // 获取token
-    [GenerateTestUserToken genTestUserSig:USERID completion:^(NSString *token, NSError *error) {
-        self.getTokenButton.selected = false;
+    [GenerateTestUserToken genTestUserSig:@"testByIos" completion:^(NSString *token, NSError *error) {
         if (error) {
             NSLog(@"请求失败: %@", error.localizedDescription);
         } else {
-            self.tokenField.text = token;
+            self.lblUserSig.text = token;
             NSLog(@"请求成功,token= %@", token);
         }
     }];
 }
 
-
-- (void)startCallButtonTapped:(UIButton *)sender {
+- (IBAction)btnStartCallTapped:(id)sender {
     if (nullptr == startCallCallbackImpl) {
         startCallCallbackImpl = new TCCCCommonCallback(@"startCall");
     }
     TCCCCallParams callParams;
-    callParams.channelId = [TO UTF8String];
-    callParams.clientData = "\n{xxx:\r\nxxxx\n}中国01 xxx02*-`";
+    callParams.channelId = AUDIO_CHANNELID;
     callParams.userId ="testByIos";
-    callParams.sdkAppId = 10;
-    callParams.userSig = "";
+    callParams.sdkAppId = SDKAppID;
+    NSString * userSig = self.lblUserSig.text;
+    callParams.userSig = [userSig UTF8String];
     tcccSDK->startCall(callParams, startCallCallbackImpl);
 }
 
-- (void)muteButtonTapped:(UIButton *)sender {
+
+- (IBAction)muteButtonTapped:(UIButton *)sender {
     sender.selected = !sender.selected;
-    [self.muteButton setTitle:@"静音" forState:UIControlStateNormal];
+    if(sender.selected) {
+        [self.btnMute setTitle:@"取消静音" forState:UIControlStateNormal];
+    } else {
+        [self.btnMute setTitle:@"静  音" forState:UIControlStateNormal];
+    }
+    
 }
 
-- (void)hangupButtonTapped:(UIButton *)sender {
+- (IBAction)hangupButtonTapped:(UIButton *)sender {
     // 终止会话
     tcccSDK->terminate();
 }
 
-- (void)speakerButtonTapped:(UIButton *)sender {
+- (IBAction)speakerButtonTapped:(UIButton *)sender {
     sender.selected = !sender.selected;
-    [self.speakerButton setTitle:@"扬声器" forState:UIControlStateNormal];
-    
+    if(sender.selected) {
+        [self.btnSpeaker setTitle:@"耳麦" forState:UIControlStateNormal];
+    } else {
+        [self.btnSpeaker setTitle:@"扬声器" forState:UIControlStateNormal];
+    }
 }
 
 
