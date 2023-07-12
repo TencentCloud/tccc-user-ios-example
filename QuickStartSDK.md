@@ -44,14 +44,14 @@
 ## 配置 App 权限
 1. 如需使用 SDK 提供的音视频功能，需要给 App 授权麦克风的使用权限。在 App 的 Info.plist 中添加以下两项，分别对应麦克风在系统弹出授权对话框时的提示信息。
 
-  ![](https://qcloudimg.tencent-cloud.cn/raw/35f2cfb2dfd2dbf4bac4d90a076e8473.png)
+  ![](https://qcloudimg.tencent-cloud.cn/raw/c92aa8cc4dcfff1e8a42e85a5becaef9.png)
 
   - Privacy - Microphone Usage Description，并填入麦克风使用目的提示语。
 
 
 2. 如需 App 进入后台仍然运行相关功能，可在 XCode 中选中当前工程项目，并在 Capabilities 下将设置项  Background Modes 设定为 ON，并勾选 Audio，AirPlay and Picture in Picture ，如下图所示：
 
-![](https://qcloudimg.tencent-cloud.cn/raw/c92aa8cc4dcfff1e8a42e85a5becaef9.png)
+![](https://qcloudimg.tencent-cloud.cn/raw/30d6ae52e0d31a9fbd07ba393a9070c1.png)
 
 
 ## 代码实现
