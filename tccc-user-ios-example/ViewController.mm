@@ -64,9 +64,80 @@ public:
     }
 };
 
+class TestTCCCCallbackImpl:public ITCCCCallback
+{
+private:
+    inline std::string makeString(const char* str) {
+        return (nullptr == str ? "" : std::string(str));
+    }
+public:
+    TestTCCCCallbackImpl() {
+    }
+    ~TestTCCCCallbackImpl() {}
+    void onError(TCCCError errCode, const char* errMsg, void* extraInfo) {
+        std::string copyErrMsg = makeString(errMsg);
+        if ([NSThread isMainThread]) {
+            return;
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+        });
+    }
+    
+    void onWarning(TCCCCWarning warningCode, const char* warningMsg, void* extraInfo) {
+        std::string copyWarningMsg = makeString(warningMsg);
+        if ([NSThread isMainThread]) {
+            
+            return;
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+        });
+    }
+    
+    void onEnded(EndedReason reason, const char* reasonMessage, const char* sessionId) {
+        std::string copyReasonMessage = makeString(reasonMessage);
+        std::string copySessionID = makeString(sessionId);
+        if ([NSThread isMainThread]) {
+            
+            return;
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+            });
+        }
+    }
+    
+    void onAccepted(const char* sessionId) {
+        std::string copySessionID = makeString(sessionId);
+        if ([NSThread isMainThread]) {
+            
+            return;
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+        });
+    };
+    
+    void onAudioVolume(TCCCVolumeInfo* volumeInfo) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+        });
+    }
+    
+    void onNetworkQuality(TCCCQualityInfo localQuality, TCCCQualityInfo* remoteQuality,
+                          uint32_t remoteQualityCount) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+        });
+    }
+private:
+    
+};
+
 ITCCCCloud* tcccSDK = nullptr;
 TCCCCommonCallback* startCallCallbackImpl = nullptr;
-
+TestTCCCCallbackImpl* tcccCallbackImpl = nullptr;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -76,6 +147,8 @@ TCCCCommonCallback* startCallCallbackImpl = nullptr;
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
+    tcccSDK->removeCallback(tcccCallbackImpl);
+    delete tcccCallbackImpl;
     destroyTCCCShareInstance();
     tcccSDK = nullptr;
     if (nullptr != startCallCallbackImpl) {
@@ -86,7 +159,8 @@ TCCCCommonCallback* startCallCallbackImpl = nullptr;
 
 - (void)initTcccSDK {
     tcccSDK = getTCCCShareInstance();
-    // tcccSDK->addCallback(tcccCallback);
+    tcccCallbackImpl = new TestTCCCCallbackImpl();
+    tcccSDK->addCallback(tcccCallbackImpl);
     // 获取TCCC SDK版本号
     const char *  version = tcccSDK->getSDKVersion();
     self.lblVersion.text =  [NSString stringWithUTF8String:version];
@@ -95,12 +169,12 @@ TCCCCommonCallback* startCallCallbackImpl = nullptr;
 
 - (IBAction)getTokenButtonTapped:(UIButton *)sender {
     // 获取token
-    [GenerateTestUserToken genTestUserSig:@"testByIos" completion:^(NSString *token, NSError *error) {
+    [GenerateTestUserToken genTestUserSig:@"testByIos" completion:^(NSString *userSig, NSError *error) {
         if (error) {
             NSLog(@"请求失败: %@", error.localizedDescription);
         } else {
-            self.lblUserSig.text = token;
-            NSLog(@"请求成功,token= %@", token);
+            self.lblUserSig.text = userSig;
+            NSLog(@"请求成功,token= %@", userSig);
         }
     }];
 }
