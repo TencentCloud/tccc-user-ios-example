@@ -76,6 +76,6 @@
 
 基本功能如下图所示
 
-![](https://qcloudimg.tencent-cloud.cn/raw/ef2afc0a86401c6b5b6710f81b992834.png)
+![](https://qcloudimg.tencent-cloud.cn/raw/feb6ac8f9ebaf0756fee1601a33fa38e.png)
 
 
