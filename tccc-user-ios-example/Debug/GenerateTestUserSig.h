@@ -31,7 +31,7 @@ static const char* AUDIO_CHANNELID = "";
 
 /**
  * 腾讯云 SDKAppId，需要替换为您自己账号下的 SDKAppId。
- * 进入腾讯云呼叫中心[控制台](https://console.cloud.tencent.com/ccc ) 创建应用，即可看到 SDKAppId，
+ * 进入腾讯云联络中心[控制台](https://console.cloud.tencent.com/ccc ) 创建应用，即可看到 SDKAppId，
  * 它是腾讯云用于区分客户的唯一标识。
  */
 static const int SDKAppID = 0;

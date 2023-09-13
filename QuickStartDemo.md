@@ -1,7 +1,7 @@
-## 快速跑通腾讯云呼叫中心用户端 ios Demo
+## 快速跑通腾讯云联络中心用户端 ios Demo
 
-腾讯云呼叫中心提供了 ios SDK，可以让座席实现拨打电话、手机等功能。也可以通过我们提供的 SDK 来实现在手机端、PC 端外呼、呼入来电接听等场景。
-本文主要介绍如何快速跑通腾讯云呼叫中心 ios Demo，只要按照如下步骤进行配置，就可以跑通基于腾讯云呼叫中心相关功能。
+腾讯云联络中心提供了 ios SDK，可以让座席实现拨打电话、手机等功能。也可以通过我们提供的 SDK 来实现在手机端、PC 端外呼、呼入来电接听等场景。
+本文主要介绍如何快速跑通腾讯云联络中心 ios Demo，只要按照如下步骤进行配置，就可以跑通基于腾讯云联络中心相关功能。
 
 ## 开发环境要求
 
@@ -12,13 +12,13 @@
 ## 前提条件
 
 - 您已 [注册腾讯云](https://cloud.tencent.com/document/product/378/17985) 账号，并完成 [实名认证](https://cloud.tencent.com/document/product/378/3629) 。
-- 您已 [开通云呼叫中心](https://cloud.tencent.com/document/product/679/48028#.E6.AD.A5.E9.AA.A41.EF.BC.9A.E5.87.86.E5.A4.87.E5.B7.A5.E4.BD.9C) 服务，并创建了 [云呼叫中心实例](https://cloud.tencent.com/document/product/679/48028#.E6.AD.A5.E9.AA.A42.EF.BC.9A.E5.88.9B.E5.BB.BA.E4.BA.91.E5.91.BC.E5.8F.AB.E4.B8.AD.E5.BF.83.E5.AE.9E.E4.BE.8B) 。
+- 您已 [开通云联络中心](https://cloud.tencent.com/document/product/679/48028#.E6.AD.A5.E9.AA.A41.EF.BC.9A.E5.87.86.E5.A4.87.E5.B7.A5.E4.BD.9C) 服务，并创建了 [云联络中心实例](https://cloud.tencent.com/document/product/679/48028#.E6.AD.A5.E9.AA.A42.EF.BC.9A.E5.88.9B.E5.BB.BA.E4.BA.91.E5.91.BC.E5.8F.AB.E4.B8.AD.E5.BF.83.E5.AE.9E.E4.BE.8B) 。
 
 
 ## 操作步骤
 [](id:step1)
 ### 步骤1：配置音频客服
-1. 登录 [呼叫中心管理端](https://tccc.qcloud.com/login)，选择**登录的呼叫中心** > **管理端** > **音频客服** > **技能组管理** > **添加技能组** 。
+1. 登录 [联络中心管理端](https://tccc.qcloud.com/login)，选择**登录的联络中心** > **管理端** > **音频客服** > **技能组管理** > **添加技能组** 。
 
 ![](https://qcloudimg.tencent-cloud.cn/image/document/fae6c3b42347a16a06f0dda49dfc0f48.png)
 
@@ -26,7 +26,7 @@
 
 ![](https://qcloudimg.tencent-cloud.cn/image/document/09f724109a6e89aa5d645725d8fa7440.png)
 
-3. 新增 IVR， **登录的呼叫中心** > **管理端** > **音频客服** > **IVR管理** > **呼入IVR** > **新建**。
+3. 新增 IVR， **登录的联络中心** > **管理端** > **音频客服** > **IVR管理** > **呼入IVR** > **新建**。
 
 ![](https://qcloudimg.tencent-cloud.cn/image/document/ac2d7643f2be4c01d9cd8de03a981db4.png)
 
@@ -53,7 +53,7 @@
 2. 设置 GenerateTestUserSig.h 文件中的相关参数：
 <ul>
   <li/>AUDIO_CHANNELID：请设置为实际的 音频入口 ID。
-  <li/>SDKAPPID：腾讯云呼叫中心 SDKAppId，需要替换为您自己账号下的 SDKAppId
+  <li/>SDKAPPID：腾讯云联络中心 SDKAppId，需要替换为您自己账号下的 SDKAppId
 	<li/>SECRETID：计算签名用的加密密钥ID。
   <li/>SECRETKEY：计算签名用的加密密钥Key。
 </ul>

@@ -4,7 +4,7 @@
  * Function: 登录参数、呼叫、会话参数和常量值的定义
  */
 /// @defgroup TCCCTypeDef_cplusplus TCCC 关键类型定义
-/// 腾讯云呼叫中心的关键类型定义
+/// 腾讯云联络中心的关键类型定义
 /// @{
 #ifndef TCCCTypeDef_h
 #  define TCCCTypeDef_h
@@ -47,7 +47,7 @@ namespace tccc {
  */
 struct TCCCLoginParams {
   ///【字段含义】应用标识（必填），腾讯云基于 sdkAppId 完成计费统计。暂时无作用可不填写
-  ///【推荐取值】在 [呼叫中心控制台](https://console.cloud.tencent.com/cccc/) 创建应用后可以在账号信息页面中得到该 ID。
+  ///【推荐取值】在 [联络中心控制台](https://console.cloud.tencent.com/cccc/) 创建应用后可以在账号信息页面中得到该 ID。
   uint32_t sdkAppId;
 
   ///【字段含义】用户标识（必填），当前用户的 userId，相当于用户名，使用 UTF-8 编码。
@@ -120,7 +120,7 @@ struct TCCCCallParams {
   const char *channelId;
 
   ///【字段含义】应用标识（必填），腾讯云基于 sdkAppId 完成计费统计。暂时无作用可不填写
-  ///【推荐取值】在 [呼叫中心控制台](https://console.cloud.tencent.com/cccc/) 创建应用后可以在账号信息页面中得到该 ID。
+  ///【推荐取值】在 [联络中心控制台](https://console.cloud.tencent.com/cccc/) 创建应用后可以在账号信息页面中得到该 ID。
   uint32_t sdkAppId;
 
   ///【字段含义】用户标识（必填），当前用户的 userId，相当于用户名，使用 UTF-8 编码。

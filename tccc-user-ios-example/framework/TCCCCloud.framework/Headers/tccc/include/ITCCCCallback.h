@@ -1,5 +1,5 @@
 //
-//  腾讯云呼叫中心的事件回调接口
+//  腾讯云联络中心的事件回调接口
 //  tccc-workstation-sdk
 //
 //  Created by gavinwjwang on 2022/7/19.
