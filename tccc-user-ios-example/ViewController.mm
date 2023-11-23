@@ -7,7 +7,7 @@
 
 #import "ViewController.h"
 #import "GenerateTestUserSig.h"
-#include "tccc/include/ITCCCCloud.h"
+#include "TCCCCloud/tccc/include/ITCCCCloud.h"
 #include <string>
 
 @interface ViewController ()
