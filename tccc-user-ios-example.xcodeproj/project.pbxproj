@@ -7,152 +7,124 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E1AE29FB2A5BE65200701F6B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AE29FA2A5BE65200701F6B /* AppDelegate.m */; };
-		E1AE29FE2A5BE65200701F6B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AE29FD2A5BE65200701F6B /* SceneDelegate.m */; };
-		E1AE2A042A5BE65200701F6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1AE2A022A5BE65200701F6B /* Main.storyboard */; };
-		E1AE2A062A5BE65400701F6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1AE2A052A5BE65400701F6B /* Assets.xcassets */; };
-		E1AE2A092A5BE65400701F6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1AE2A072A5BE65400701F6B /* LaunchScreen.storyboard */; };
-		E1AE2A0C2A5BE65400701F6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AE2A0B2A5BE65400701F6B /* main.m */; };
-		E1AE2A132A5CEC1500701F6B /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E1AE2A122A5CEC1500701F6B /* ViewController.mm */; };
-		E1AE2A432A5CF3A800701F6B /* GenerateTestUserSig.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AE2A412A5CF3A800701F6B /* GenerateTestUserSig.m */; };
+		68B6058411A6C5BB9582DB5B /* Pods_tccc_user_ios_example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 024E10C56F89DFD2991071BB /* Pods_tccc_user_ios_example.framework */; };
+		E12BE8162B0EF56C00B91743 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E12BE8152B0EF56C00B91743 /* AppDelegate.m */; };
+		E12BE8192B0EF56C00B91743 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E12BE8182B0EF56C00B91743 /* SceneDelegate.m */; };
+		E12BE81F2B0EF56C00B91743 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E12BE81D2B0EF56C00B91743 /* Main.storyboard */; };
+		E12BE8212B0EF56E00B91743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E12BE8202B0EF56E00B91743 /* Assets.xcassets */; };
+		E12BE8242B0EF56E00B91743 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E12BE8222B0EF56E00B91743 /* LaunchScreen.storyboard */; };
+		E12BE8272B0EF56E00B91743 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E12BE8262B0EF56E00B91743 /* main.m */; };
+		E12BE82E2B0EF5EB00B91743 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E12BE82D2B0EF5EB00B91743 /* ViewController.mm */; };
+		E12BE8312B0EF6E900B91743 /* GenerateTestUserSig.m in Sources */ = {isa = PBXBuildFile; fileRef = E12BE8302B0EF6E800B91743 /* GenerateTestUserSig.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		E1AE2A3C2A5CEF1F00701F6B /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		E1AE29F62A5BE65200701F6B /* tccc-user-ios-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tccc-user-ios-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1AE29F92A5BE65200701F6B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E1AE29FA2A5BE65200701F6B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E1AE29FC2A5BE65200701F6B /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		E1AE29FD2A5BE65200701F6B /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		E1AE29FF2A5BE65200701F6B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E1AE2A032A5BE65200701F6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E1AE2A052A5BE65400701F6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E1AE2A082A5BE65400701F6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E1AE2A0A2A5BE65400701F6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E1AE2A0B2A5BE65400701F6B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E1AE2A122A5CEC1500701F6B /* ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
-		E1AE2A1A2A5CEDDA00701F6B /* TCCCCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TCCCCloud.framework; path = "tccc-user-ios-example/framework/TCCCCloud.framework"; sourceTree = "<group>"; };
-		E1AE2A1C2A5CEDE700701F6B /* TXFFmpeg.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TXFFmpeg.xcframework; path = "tccc-user-ios-example/framework/TXFFmpeg.xcframework"; sourceTree = "<group>"; };
-		E1AE2A1E2A5CEDF400701F6B /* TXSoundTouch.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TXSoundTouch.xcframework; path = "tccc-user-ios-example/framework/TXSoundTouch.xcframework"; sourceTree = "<group>"; };
-		E1AE2A202A5CEE0200701F6B /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
-		E1AE2A222A5CEE0B00701F6B /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		E1AE2A242A5CEE1300701F6B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		E1AE2A262A5CEE1D00701F6B /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		E1AE2A282A5CEE2500701F6B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		E1AE2A2A2A5CEE2E00701F6B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		E1AE2A2C2A5CEE3700701F6B /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		E1AE2A2E2A5CEE3F00701F6B /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
-		E1AE2A302A5CEE4700701F6B /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
-		E1AE2A322A5CEE5400701F6B /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
-		E1AE2A342A5CEE5B00701F6B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		E1AE2A362A5CEE6600701F6B /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		E1AE2A382A5CEE6E00701F6B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		E1AE2A412A5CF3A800701F6B /* GenerateTestUserSig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenerateTestUserSig.m; sourceTree = "<group>"; };
-		E1AE2A422A5CF3A800701F6B /* GenerateTestUserSig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenerateTestUserSig.h; sourceTree = "<group>"; };
+		024E10C56F89DFD2991071BB /* Pods_tccc_user_ios_example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tccc_user_ios_example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C745C689D4465BA1CCC6527E /* Pods-tccc-user-ios-example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tccc-user-ios-example.release.xcconfig"; path = "Target Support Files/Pods-tccc-user-ios-example/Pods-tccc-user-ios-example.release.xcconfig"; sourceTree = "<group>"; };
+		E12BE8112B0EF56C00B91743 /* tccc-user-ios-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tccc-user-ios-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E12BE8142B0EF56C00B91743 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E12BE8152B0EF56C00B91743 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E12BE8172B0EF56C00B91743 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		E12BE8182B0EF56C00B91743 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		E12BE81A2B0EF56C00B91743 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E12BE81E2B0EF56C00B91743 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E12BE8202B0EF56E00B91743 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E12BE8232B0EF56E00B91743 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E12BE8252B0EF56E00B91743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E12BE8262B0EF56E00B91743 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E12BE82D2B0EF5EB00B91743 /* ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		E12BE82F2B0EF6E800B91743 /* GenerateTestUserSig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenerateTestUserSig.h; sourceTree = "<group>"; };
+		E12BE8302B0EF6E800B91743 /* GenerateTestUserSig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenerateTestUserSig.m; sourceTree = "<group>"; };
+		EB9AC770ACFCA6C9182BD528 /* Pods-tccc-user-ios-example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tccc-user-ios-example.debug.xcconfig"; path = "Target Support Files/Pods-tccc-user-ios-example/Pods-tccc-user-ios-example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E1AE29F32A5BE65200701F6B /* Frameworks */ = {
+		E12BE80E2B0EF56C00B91743 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68B6058411A6C5BB9582DB5B /* Pods_tccc_user_ios_example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E1AE29ED2A5BE65200701F6B = {
+		6A3457841FE029216A176FED /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E1AE29F82A5BE65200701F6B /* tccc-user-ios-example */,
-				E1AE29F72A5BE65200701F6B /* Products */,
-				E1AE2A192A5CEDD900701F6B /* Frameworks */,
+				EB9AC770ACFCA6C9182BD528 /* Pods-tccc-user-ios-example.debug.xcconfig */,
+				C745C689D4465BA1CCC6527E /* Pods-tccc-user-ios-example.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9176C78CECAC10979423DFE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				024E10C56F89DFD2991071BB /* Pods_tccc_user_ios_example.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E12BE8082B0EF56C00B91743 = {
+			isa = PBXGroup;
+			children = (
+				E12BE8132B0EF56C00B91743 /* tccc-user-ios-example */,
+				E12BE8122B0EF56C00B91743 /* Products */,
+				6A3457841FE029216A176FED /* Pods */,
+				9176C78CECAC10979423DFE8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		E1AE29F72A5BE65200701F6B /* Products */ = {
+		E12BE8122B0EF56C00B91743 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E1AE29F62A5BE65200701F6B /* tccc-user-ios-example.app */,
+				E12BE8112B0EF56C00B91743 /* tccc-user-ios-example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E1AE29F82A5BE65200701F6B /* tccc-user-ios-example */ = {
+		E12BE8132B0EF56C00B91743 /* tccc-user-ios-example */ = {
 			isa = PBXGroup;
 			children = (
-				E1AE2A152A5CEC8300701F6B /* Debug */,
-				E1AE2A122A5CEC1500701F6B /* ViewController.mm */,
-				E1AE29F92A5BE65200701F6B /* AppDelegate.h */,
-				E1AE29FA2A5BE65200701F6B /* AppDelegate.m */,
-				E1AE29FC2A5BE65200701F6B /* SceneDelegate.h */,
-				E1AE29FD2A5BE65200701F6B /* SceneDelegate.m */,
-				E1AE29FF2A5BE65200701F6B /* ViewController.h */,
-				E1AE2A022A5BE65200701F6B /* Main.storyboard */,
-				E1AE2A052A5BE65400701F6B /* Assets.xcassets */,
-				E1AE2A072A5BE65400701F6B /* LaunchScreen.storyboard */,
-				E1AE2A0A2A5BE65400701F6B /* Info.plist */,
-				E1AE2A0B2A5BE65400701F6B /* main.m */,
+				E1A4DC8B2B0EF915004FB842 /* Debug */,
+				E12BE82D2B0EF5EB00B91743 /* ViewController.mm */,
+				E12BE8142B0EF56C00B91743 /* AppDelegate.h */,
+				E12BE8152B0EF56C00B91743 /* AppDelegate.m */,
+				E12BE8172B0EF56C00B91743 /* SceneDelegate.h */,
+				E12BE8182B0EF56C00B91743 /* SceneDelegate.m */,
+				E12BE81A2B0EF56C00B91743 /* ViewController.h */,
+				E12BE81D2B0EF56C00B91743 /* Main.storyboard */,
+				E12BE8202B0EF56E00B91743 /* Assets.xcassets */,
+				E12BE8222B0EF56E00B91743 /* LaunchScreen.storyboard */,
+				E12BE8252B0EF56E00B91743 /* Info.plist */,
+				E12BE8262B0EF56E00B91743 /* main.m */,
 			);
 			path = "tccc-user-ios-example";
 			sourceTree = "<group>";
 		};
-		E1AE2A152A5CEC8300701F6B /* Debug */ = {
+		E1A4DC8B2B0EF915004FB842 /* Debug */ = {
 			isa = PBXGroup;
 			children = (
-				E1AE2A422A5CF3A800701F6B /* GenerateTestUserSig.h */,
-				E1AE2A412A5CF3A800701F6B /* GenerateTestUserSig.m */,
+				E12BE82F2B0EF6E800B91743 /* GenerateTestUserSig.h */,
+				E12BE8302B0EF6E800B91743 /* GenerateTestUserSig.m */,
 			);
-			path = Debug;
-			sourceTree = "<group>";
-		};
-		E1AE2A192A5CEDD900701F6B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E1AE2A382A5CEE6E00701F6B /* CoreMedia.framework */,
-				E1AE2A362A5CEE6600701F6B /* libc++.tbd */,
-				E1AE2A342A5CEE5B00701F6B /* MobileCoreServices.framework */,
-				E1AE2A322A5CEE5400701F6B /* libresolv.tbd */,
-				E1AE2A302A5CEE4700701F6B /* MetalKit.framework */,
-				E1AE2A2E2A5CEE3F00701F6B /* Accelerate.framework */,
-				E1AE2A2C2A5CEE3700701F6B /* OpenGLES.framework */,
-				E1AE2A2A2A5CEE2E00701F6B /* AVFoundation.framework */,
-				E1AE2A282A5CEE2500701F6B /* CoreTelephony.framework */,
-				E1AE2A262A5CEE1D00701F6B /* libsqlite3.0.tbd */,
-				E1AE2A242A5CEE1300701F6B /* SystemConfiguration.framework */,
-				E1AE2A222A5CEE0B00701F6B /* AssetsLibrary.framework */,
-				E1AE2A202A5CEE0200701F6B /* GLKit.framework */,
-				E1AE2A1E2A5CEDF400701F6B /* TXSoundTouch.xcframework */,
-				E1AE2A1C2A5CEDE700701F6B /* TXFFmpeg.xcframework */,
-				E1AE2A1A2A5CEDDA00701F6B /* TCCCCloud.framework */,
-			);
-			name = Frameworks;
+			name = Debug;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E1AE29F52A5BE65200701F6B /* tccc-user-ios-example */ = {
+		E12BE8102B0EF56C00B91743 /* tccc-user-ios-example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E1AE2A0F2A5BE65400701F6B /* Build configuration list for PBXNativeTarget "tccc-user-ios-example" */;
+			buildConfigurationList = E12BE82A2B0EF56E00B91743 /* Build configuration list for PBXNativeTarget "tccc-user-ios-example" */;
 			buildPhases = (
-				E1AE29F22A5BE65200701F6B /* Sources */,
-				E1AE29F32A5BE65200701F6B /* Frameworks */,
-				E1AE29F42A5BE65200701F6B /* Resources */,
-				E1AE2A3C2A5CEF1F00701F6B /* Embed Frameworks */,
+				2543BC782DA708062482C462 /* [CP] Check Pods Manifest.lock */,
+				E12BE80D2B0EF56C00B91743 /* Sources */,
+				E12BE80E2B0EF56C00B91743 /* Frameworks */,
+				E12BE80F2B0EF56C00B91743 /* Resources */,
+				78060BDAD881B9F372715CE2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,24 +132,24 @@
 			);
 			name = "tccc-user-ios-example";
 			productName = "tccc-user-ios-example";
-			productReference = E1AE29F62A5BE65200701F6B /* tccc-user-ios-example.app */;
+			productReference = E12BE8112B0EF56C00B91743 /* tccc-user-ios-example.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		E1AE29EE2A5BE65200701F6B /* Project object */ = {
+		E12BE8092B0EF56C00B91743 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					E1AE29F52A5BE65200701F6B = {
-						CreatedOnToolsVersion = 14.2;
+					E12BE8102B0EF56C00B91743 = {
+						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
 			};
-			buildConfigurationList = E1AE29F12A5BE65200701F6B /* Build configuration list for PBXProject "tccc-user-ios-example" */;
+			buildConfigurationList = E12BE80C2B0EF56C00B91743 /* Build configuration list for PBXProject "tccc-user-ios-example" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -185,57 +157,99 @@
 				en,
 				Base,
 			);
-			mainGroup = E1AE29ED2A5BE65200701F6B;
-			productRefGroup = E1AE29F72A5BE65200701F6B /* Products */;
+			mainGroup = E12BE8082B0EF56C00B91743;
+			productRefGroup = E12BE8122B0EF56C00B91743 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E1AE29F52A5BE65200701F6B /* tccc-user-ios-example */,
+				E12BE8102B0EF56C00B91743 /* tccc-user-ios-example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E1AE29F42A5BE65200701F6B /* Resources */ = {
+		E12BE80F2B0EF56C00B91743 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1AE2A092A5BE65400701F6B /* LaunchScreen.storyboard in Resources */,
-				E1AE2A062A5BE65400701F6B /* Assets.xcassets in Resources */,
-				E1AE2A042A5BE65200701F6B /* Main.storyboard in Resources */,
+				E12BE8242B0EF56E00B91743 /* LaunchScreen.storyboard in Resources */,
+				E12BE8212B0EF56E00B91743 /* Assets.xcassets in Resources */,
+				E12BE81F2B0EF56C00B91743 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2543BC782DA708062482C462 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-tccc-user-ios-example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78060BDAD881B9F372715CE2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-tccc-user-ios-example/Pods-tccc-user-ios-example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-tccc-user-ios-example/Pods-tccc-user-ios-example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-tccc-user-ios-example/Pods-tccc-user-ios-example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		E1AE29F22A5BE65200701F6B /* Sources */ = {
+		E12BE80D2B0EF56C00B91743 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1AE29FB2A5BE65200701F6B /* AppDelegate.m in Sources */,
-				E1AE2A132A5CEC1500701F6B /* ViewController.mm in Sources */,
-				E1AE2A0C2A5BE65400701F6B /* main.m in Sources */,
-				E1AE2A432A5CF3A800701F6B /* GenerateTestUserSig.m in Sources */,
-				E1AE29FE2A5BE65200701F6B /* SceneDelegate.m in Sources */,
+				E12BE82E2B0EF5EB00B91743 /* ViewController.mm in Sources */,
+				E12BE8162B0EF56C00B91743 /* AppDelegate.m in Sources */,
+				E12BE8272B0EF56E00B91743 /* main.m in Sources */,
+				E12BE8312B0EF6E900B91743 /* GenerateTestUserSig.m in Sources */,
+				E12BE8192B0EF56C00B91743 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E1AE2A022A5BE65200701F6B /* Main.storyboard */ = {
+		E12BE81D2B0EF56C00B91743 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E1AE2A032A5BE65200701F6B /* Base */,
+				E12BE81E2B0EF56C00B91743 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		E1AE2A072A5BE65400701F6B /* LaunchScreen.storyboard */ = {
+		E12BE8222B0EF56E00B91743 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E1AE2A082A5BE65400701F6B /* Base */,
+				E12BE8232B0EF56E00B91743 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -243,7 +257,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		E1AE2A0D2A5BE65400701F6B /* Debug */ = {
+		E12BE8282B0EF56E00B91743 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -293,7 +307,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -301,7 +315,7 @@
 			};
 			name = Debug;
 		};
-		E1AE2A0E2A5BE65400701F6B /* Release */ = {
+		E12BE8292B0EF56E00B91743 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -345,7 +359,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -353,21 +367,18 @@
 			};
 			name = Release;
 		};
-		E1AE2A102A5BE65400701F6B /* Debug */ = {
+		E12BE82B2B0EF56E00B91743 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB9AC770ACFCA6C9182BD528 /* Pods-tccc-user-ios-example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/tccc-user-ios-example/framework",
-				);
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/tccc-User-ios-example/framework/TCCCCloud.framework/Headers";
 				INFOPLIST_FILE = "tccc-user-ios-example/Info.plist";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "需要访问您的麦克风才可以正常通话";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -379,29 +390,26 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tencent.tcccsdk.ios.demo.tccc-user-ios-example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		E1AE2A112A5BE65400701F6B /* Release */ = {
+		E12BE82C2B0EF56E00B91743 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C745C689D4465BA1CCC6527E /* Pods-tccc-user-ios-example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/tccc-user-ios-example/framework",
-				);
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/tccc-User-ios-example/framework/TCCCCloud.framework/Headers";
 				INFOPLIST_FILE = "tccc-user-ios-example/Info.plist";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "需要访问您的麦克风才可以正常通话";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -413,9 +421,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tencent.tcccsdk.ios.demo.tccc-user-ios-example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -424,25 +432,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E1AE29F12A5BE65200701F6B /* Build configuration list for PBXProject "tccc-user-ios-example" */ = {
+		E12BE80C2B0EF56C00B91743 /* Build configuration list for PBXProject "tccc-user-ios-example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E1AE2A0D2A5BE65400701F6B /* Debug */,
-				E1AE2A0E2A5BE65400701F6B /* Release */,
+				E12BE8282B0EF56E00B91743 /* Debug */,
+				E12BE8292B0EF56E00B91743 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E1AE2A0F2A5BE65400701F6B /* Build configuration list for PBXNativeTarget "tccc-user-ios-example" */ = {
+		E12BE82A2B0EF56E00B91743 /* Build configuration list for PBXNativeTarget "tccc-user-ios-example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E1AE2A102A5BE65400701F6B /* Debug */,
-				E1AE2A112A5BE65400701F6B /* Release */,
+				E12BE82B2B0EF56E00B91743 /* Debug */,
+				E12BE82C2B0EF56E00B91743 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = E1AE29EE2A5BE65200701F6B /* Project object */;
+	rootObject = E12BE8092B0EF56C00B91743 /* Project object */;
 }
