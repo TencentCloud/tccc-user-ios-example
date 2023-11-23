@@ -14,25 +14,6 @@
 		E1AE2A092A5BE65400701F6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1AE2A072A5BE65400701F6B /* LaunchScreen.storyboard */; };
 		E1AE2A0C2A5BE65400701F6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AE2A0B2A5BE65400701F6B /* main.m */; };
 		E1AE2A132A5CEC1500701F6B /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E1AE2A122A5CEC1500701F6B /* ViewController.mm */; };
-		E1AE2A212A5CEE0200701F6B /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1AE2A202A5CEE0200701F6B /* GLKit.framework */; };
-		E1AE2A232A5CEE0B00701F6B /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1AE2A222A5CEE0B00701F6B /* AssetsLibrary.framework */; };
-		E1AE2A252A5CEE1300701F6B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1AE2A242A5CEE1300701F6B /* SystemConfiguration.framework */; };
-		E1AE2A272A5CEE1D00701F6B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E1AE2A262A5CEE1D00701F6B /* libsqlite3.0.tbd */; };
-		E1AE2A292A5CEE2500701F6B /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1AE2A282A5CEE2500701F6B /* CoreTelephony.framework */; };
-		E1AE2A2B2A5CEE2E00701F6B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1AE2A2A2A5CEE2E00701F6B /* AVFoundation.framework */; };
-		E1AE2A2D2A5CEE3700701F6B /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1AE2A2C2A5CEE3700701F6B /* OpenGLES.framework */; };
-		E1AE2A2F2A5CEE3F00701F6B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1AE2A2E2A5CEE3F00701F6B /* Accelerate.framework */; };
-		E1AE2A312A5CEE4700701F6B /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1AE2A302A5CEE4700701F6B /* MetalKit.framework */; };
-		E1AE2A332A5CEE5400701F6B /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E1AE2A322A5CEE5400701F6B /* libresolv.tbd */; };
-		E1AE2A352A5CEE5B00701F6B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1AE2A342A5CEE5B00701F6B /* MobileCoreServices.framework */; };
-		E1AE2A372A5CEE6600701F6B /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E1AE2A362A5CEE6600701F6B /* libc++.tbd */; };
-		E1AE2A392A5CEE6E00701F6B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1AE2A382A5CEE6E00701F6B /* CoreMedia.framework */; };
-		E1AE2A3A2A5CEF1F00701F6B /* TCCCCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1AE2A1A2A5CEDDA00701F6B /* TCCCCloud.framework */; };
-		E1AE2A3B2A5CEF1F00701F6B /* TCCCCloud.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1AE2A1A2A5CEDDA00701F6B /* TCCCCloud.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E1AE2A3D2A5CEF2100701F6B /* TXFFmpeg.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1AE2A1C2A5CEDE700701F6B /* TXFFmpeg.xcframework */; };
-		E1AE2A3E2A5CEF2100701F6B /* TXFFmpeg.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1AE2A1C2A5CEDE700701F6B /* TXFFmpeg.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E1AE2A3F2A5CEF2400701F6B /* TXSoundTouch.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1AE2A1E2A5CEDF400701F6B /* TXSoundTouch.xcframework */; };
-		E1AE2A402A5CEF2400701F6B /* TXSoundTouch.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1AE2A1E2A5CEDF400701F6B /* TXSoundTouch.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E1AE2A432A5CF3A800701F6B /* GenerateTestUserSig.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AE2A412A5CF3A800701F6B /* GenerateTestUserSig.m */; };
 /* End PBXBuildFile section */
 
@@ -43,9 +24,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E1AE2A402A5CEF2400701F6B /* TXSoundTouch.xcframework in Embed Frameworks */,
-				E1AE2A3E2A5CEF2100701F6B /* TXFFmpeg.xcframework in Embed Frameworks */,
-				E1AE2A3B2A5CEF1F00701F6B /* TCCCCloud.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,22 +68,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1AE2A392A5CEE6E00701F6B /* CoreMedia.framework in Frameworks */,
-				E1AE2A372A5CEE6600701F6B /* libc++.tbd in Frameworks */,
-				E1AE2A352A5CEE5B00701F6B /* MobileCoreServices.framework in Frameworks */,
-				E1AE2A3A2A5CEF1F00701F6B /* TCCCCloud.framework in Frameworks */,
-				E1AE2A332A5CEE5400701F6B /* libresolv.tbd in Frameworks */,
-				E1AE2A312A5CEE4700701F6B /* MetalKit.framework in Frameworks */,
-				E1AE2A2F2A5CEE3F00701F6B /* Accelerate.framework in Frameworks */,
-				E1AE2A3F2A5CEF2400701F6B /* TXSoundTouch.xcframework in Frameworks */,
-				E1AE2A2D2A5CEE3700701F6B /* OpenGLES.framework in Frameworks */,
-				E1AE2A2B2A5CEE2E00701F6B /* AVFoundation.framework in Frameworks */,
-				E1AE2A292A5CEE2500701F6B /* CoreTelephony.framework in Frameworks */,
-				E1AE2A272A5CEE1D00701F6B /* libsqlite3.0.tbd in Frameworks */,
-				E1AE2A252A5CEE1300701F6B /* SystemConfiguration.framework in Frameworks */,
-				E1AE2A3D2A5CEF2100701F6B /* TXFFmpeg.xcframework in Frameworks */,
-				E1AE2A232A5CEE0B00701F6B /* AssetsLibrary.framework in Frameworks */,
-				E1AE2A212A5CEE0200701F6B /* GLKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,7 +379,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tencent.tcccsdk.ios.demo.tccc-user-ios-example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -451,7 +413,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tencent.tcccsdk.ios.demo.tccc-user-ios-example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
