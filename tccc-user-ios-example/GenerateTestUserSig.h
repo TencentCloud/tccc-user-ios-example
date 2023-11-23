@@ -25,9 +25,15 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /***
-*  音频入口ID
+*  音频客服入口ID
 */
 static const char* AUDIO_CHANNELID = "";
+
+/**
+ * 视频客服入口ID
+ */
+static const char* VIDEO_CHANNELID = "";
+
 
 /**
  * 腾讯云 SDKAppId，需要替换为您自己账号下的 SDKAppId。

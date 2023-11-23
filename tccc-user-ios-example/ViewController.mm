@@ -13,21 +13,13 @@
 @interface ViewController ()
 
 
-@property (weak, nonatomic) IBOutlet UIButton *btnStartCall;
-
-@property (weak, nonatomic) IBOutlet UIButton *btnSpeaker;
-@property (weak, nonatomic) IBOutlet UIButton *btnMute;
-
-@property (weak, nonatomic) IBOutlet UILabel *lblUserSig;
-@property (weak, nonatomic) IBOutlet UILabel *lblVersion;
-
-
-
 @end
 
 @implementation ViewController
 
 using namespace tccc;
+
+ITCCCCloud* tcccSDK = nullptr;
 
 class TCCCCommonCallback : public ITXCallback {
 private:
@@ -67,11 +59,13 @@ public:
 class TestTCCCCallbackImpl:public ITCCCCallback
 {
 private:
+    ViewController* mViewController;
     inline std::string makeString(const char* str) {
         return (nullptr == str ? "" : std::string(str));
     }
 public:
-    TestTCCCCallbackImpl() {
+    TestTCCCCallbackImpl(ViewController* controller) {
+        mViewController = controller;
     }
     ~TestTCCCCallbackImpl() {}
     void onError(TCCCError errCode, const char* errMsg, void* extraInfo) {
@@ -119,6 +113,16 @@ public:
         });
     };
     
+    void onUserVideoAvailable(const char* userId, bool available) {
+        if (available) {
+            id remoteViewPtr = [mViewController remoteView];
+            void *cppRemoteViewPtr = (__bridge void *)(remoteViewPtr);
+            tcccSDK->startRemoteView(userId,TCCCVideoStreamType::TCCCVideoStreamTypeBig,cppRemoteViewPtr);
+        } else {
+            tcccSDK->stopRemoteView(userId, TCCCVideoStreamType::TCCCVideoStreamTypeBig);
+        }
+    }
+    
     void onAudioVolume(TCCCVolumeInfo* volumeInfo) {
         dispatch_async(dispatch_get_main_queue(), ^{
             
@@ -135,7 +139,7 @@ private:
     
 };
 
-ITCCCCloud* tcccSDK = nullptr;
+
 TCCCCommonCallback* startCallCallbackImpl = nullptr;
 TestTCCCCallbackImpl* tcccCallbackImpl = nullptr;
 
@@ -159,7 +163,7 @@ TestTCCCCallbackImpl* tcccCallbackImpl = nullptr;
 
 - (void)initTcccSDK {
     tcccSDK = getTCCCShareInstance();
-    tcccCallbackImpl = new TestTCCCCallbackImpl();
+    tcccCallbackImpl = new TestTCCCCallbackImpl(self);
     tcccSDK->addCallback(tcccCallbackImpl);
     // 获取TCCC SDK版本号
     const char *  version = tcccSDK->getSDKVersion();
@@ -179,7 +183,7 @@ TestTCCCCallbackImpl* tcccCallbackImpl = nullptr;
     }];
 }
 
-- (IBAction)btnStartCallTapped:(id)sender {
+- (IBAction)btnStartVoipCallTapped:(id)sender {
     if (nullptr == startCallCallbackImpl) {
         startCallCallbackImpl = new TCCCCommonCallback(@"startCall");
     }
@@ -187,6 +191,22 @@ TestTCCCCallbackImpl* tcccCallbackImpl = nullptr;
     callParams.channelId = AUDIO_CHANNELID;
     callParams.userId ="testByIos";
     callParams.sdkAppId = SDKAppID;
+    // 指定为音频客服
+    callParams.callType = TCCCCallType::Voip;
+    NSString * userSig = self.lblUserSig.text;
+    callParams.userSig = [userSig UTF8String];
+    tcccSDK->startCall(callParams, startCallCallbackImpl);
+}
+- (IBAction)btnStartVideoClick:(id)sender {
+    if (nullptr == startCallCallbackImpl) {
+        startCallCallbackImpl = new TCCCCommonCallback(@"startCall");
+    }
+    TCCCCallParams callParams;
+    callParams.channelId = VIDEO_CHANNELID;
+    callParams.userId ="testByIos";
+    callParams.sdkAppId = SDKAppID;
+    // 指定为视频客服
+    callParams.callType = TCCCCallType::Video;
     NSString * userSig = self.lblUserSig.text;
     callParams.userSig = [userSig UTF8String];
     tcccSDK->startCall(callParams, startCallCallbackImpl);
@@ -217,5 +237,14 @@ TestTCCCCallbackImpl* tcccCallbackImpl = nullptr;
     }
 }
 
+- (IBAction)btnStartPreviewClick:(id)sender {
+    id mainViewPtr = [self mainPreView];
+    void *cppMainViewPtr = (__bridge void *)(mainViewPtr);
+    tcccSDK->startLocalPreview(true,cppMainViewPtr);
+}
+
+- (IBAction)btnStopPreviewClick:(id)sender {
+    tcccSDK->stopLocalPreview();
+}
 
 @end

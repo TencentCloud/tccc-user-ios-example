@@ -379,6 +379,8 @@
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "tccc-user-ios-example/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "需要访问您摄像头才可以正常通话";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "需要访问您麦克风才可以正常通话";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -410,6 +412,8 @@
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "tccc-user-ios-example/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "需要访问您摄像头才可以正常通话";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "需要访问您麦克风才可以正常通话";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
