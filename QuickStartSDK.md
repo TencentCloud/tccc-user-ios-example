@@ -10,9 +10,47 @@
 
 ## 集成 SDK
 
-### 手动下载
+### 方案一：使用 CocoaPods
 
-目前我们暂时还未发布到 CocoaPods ，您只能手动下载 SDK 集成到工程里。
+1. 安装 CocoaPods
+  在终端窗口中输入如下命令（需要提前在 Mac 中安装 Ruby 环境）：
+
+   ``` bash
+   sudo gem install cocoapods
+   ```
+2. 创建 Podfile 文件
+ 进入项目所在路径，输入以下命令行之后项目路径下会出现一个 Podfile 文件。
+
+   ``` bash
+   pod init
+   ```
+3. 编辑 Podfile 文件
+ 根据您的项目需要编辑 Podfile 文件：
+
+   ``` bash
+    platform :ios, '8.0'
+   
+     target 'App' do
+       pod 'TCCCCloud_Ios', :podspec => 'https://tccc.qcloud.com/assets/doc/user/release/TCCCCloud_Ios.podspec'
+     end
+   ```
+4. 更新并安装 SDK
+
+- 在终端窗口中输入如下命令以更新本地库文件，并安装 SDK：
+
+   ``` bash
+   pod install
+   ```
+- 或使用以下命令更新本地库版本：
+
+   ``` bash
+   pod update
+   ```
+
+   pod 命令执行完后，会生成集成了 SDK 的 .xcworkspace 后缀的工程文件，双击打开即可。
+
+
+### 方案二：手动下载
 
 1. 下载最新版本 [TCCC User SDK](https://tccc.qcloud.com/assets/doc/user/release/TCCCCloud_ios_last.zip)。
 
@@ -24,7 +62,7 @@
 
 ![](https://qcloudimg.tencent-cloud.cn/raw/84d1a47fdeab5f1fd50080adf9150ff8.png)
 
-4. 依次添加下载的 **TCCCCloud.Framework**、**TXFFmpeg.xcframework**、**TXSoundTouch.xcframework**、及其所需依赖库 **GLKit.framework**、**AssetsLibrary.framework**、**SystemConfiguration.framework**、**libsqlite3.0.tbd**、**CoreTelephony.framework**、**AVFoundation.framework**、**OpenGLES.framework**、**Accelerate.framework**、**MetalKit.framework**、**libresolv.tbd**、**MobileCoreServices.framework**、**libc++.tbd**、**CoreMedia.framework**。
+4. 依次添加下载的 **TCCCCloud.Framework**、**ImSDK_CPP.Framework**、**TXFFmpeg.xcframework**、**TXSoundTouch.xcframework**、及其所需依赖库 **GLKit.framework**、**AssetsLibrary.framework**、**SystemConfiguration.framework**、**libsqlite3.0.tbd**、**CoreTelephony.framework**、**AVFoundation.framework**、**OpenGLES.framework**、**Accelerate.framework**、**MetalKit.framework**、**libresolv.tbd**、**MobileCoreServices.framework**、**libc++.tbd**、**CoreMedia.framework**。
 
 ![](https://qcloudimg.tencent-cloud.cn/raw/d567de470f17a519565aa451e17d7af2.png)
 
@@ -35,10 +73,6 @@
 6. 在工程target中Build Settings的**Other Linker Flags**增加 **-ObjC** 配置。
 
 ![](https://qcloudimg.tencent-cloud.cn/raw/c7a890a392a0f1cd667d2bea2c4d46aa.png)
-
-7. 配置 **Header Search Paths**。如下类似输入 **$(PROJECT_DIR)/tccc-User-ios-example/framework/TCCCCloud.framework/Headers**
-
-![](https://qcloudimg.tencent-cloud.cn/raw/63f09f767799ab6f11c8f74145c8c820.png)
 
 
 ## 配置 App 权限
@@ -60,7 +94,7 @@
 
 ```c++
 // 引入C++头文件
-#include "tccc/include/ITCCCCloud.h"
+#include "TCCCCloud/tccc/include/ITCCCCloud.h"
 // 使用tccc命名空间
 using namespace tccc;
 // 获取tcccSDK 单例
